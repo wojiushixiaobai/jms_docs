@@ -1,0 +1,98 @@
+site_name: 'JumpServer Docs'
+site_url: 'https://jumpserver.org'
+site_description: 'JumpServer Docs'
+site_author: '吴育煌'
+
+repo_name: 'JumpServer Docs'
+repo_url: 'https://github.com/jumpserver/docs'
+
+theme:
+    name: 'material'
+    logo: 'img/logo.ico'
+    favicon: 'img/facio.ico'
+    language: 'zh'
+    feature:
+        tabs: true
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - django
+        - shell
+        - mysql
+        - python
+
+nav:
+    - 主页: index.md
+    - 安装配置:
+        - 安装文档: install/step_by_step.md
+        - 极速部署: install/setup_by_fast.md
+        - 容器部署: install/docker_install.md
+        - 分布式部署: install/setup_by_prod.md
+        - Ansible部署: install/ansible_install.md
+
+    - 管理文档:
+        - 快速入门: admin-guide/quick_start.md
+    - 开发文档:
+        - API文档: dev/rest_api.md
+    - 问题清单: issues/list.md
+    - 用户文档:
+        - 用户页面: user-guide/user_guide.md
+        - 我的资产: user-guide/assets/user-asset.md
+        - 我的应用:
+              - 数据库应用: user-guide/applications/user-database-app.md
+        - 命令执行: user-guide/ops/command-executions/create.md
+        - 个人信息: user-guide/users/profile.md
+        - Web终端: user-guide/terminal/web-terminal.md
+        - 文件管理: user-guide/terminal/web-sftp.md
+    - 帮助文档:
+        - FAQ文档: faq/faq.md
+    - 关于:
+        - 许可: about/license.md
+        - 贡献: about/contributor.md
+        - 更新说明: about/change_log.md
+        - 联系方式: about/contact.md
+
+markdown_extensions:
+    - admonition
+    - codehilite:
+        guess_lang: false
+        linenums: false
+    - toc:
+        permalink: true
+    - footnotes
+    - attr_list
+    - def_list
+    - tables
+    - abbr
+    - md_in_html
+    - pymdownx.extra
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_png
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink:
+        repo_url_shortener: True
+        repo_url_shorthand: True
+        repo_url_shorthand: True
+        social_url_shorthand: True
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist
+    - pymdownx.tilde
+    - pymdownx.betterem
+    - pymdownx.superfences
+    - pymdownx.progressbar
+
+extra_css:
+    - css/extra.css
+
+copyright: Copyright &copy; 2014-2020 <a href="https://jumpserver.org/">杭州飞致云信息科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15023818号</a>
+
+plugins:
+    - search
