@@ -51,7 +51,7 @@ setup(
     long_description=long_description,
     author='Tom Christie',
     author_email='tom@tomchristie.com',  # SEE NOTE BELOW (*)
-    packages=get_packages("mkdocs"),
+    packages=get_packages("docs"),
     include_package_data=True,
     install_requires=[
         'click>=3.3',
