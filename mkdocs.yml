@@ -11,15 +11,10 @@ theme:
     logo: 'img/logo.ico'
     favicon: 'img/facio.ico'
     language: 'zh'
-    feature:
-        tabs: true
     highlightjs: true
     hljs_languages:
         - yaml
         - django
-        - shell
-        - mysql
-        - python
 
 nav:
     - 主页: index.md
