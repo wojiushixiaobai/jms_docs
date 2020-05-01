@@ -8,7 +8,7 @@
 ## 下载
 
 !!! tip "下载文件"
-    ```
+    ```sh
     cd /opt
     yum -y install wget git
     git clone --depth=1 https://github.com/jumpserver/setuptools.git
@@ -18,7 +18,7 @@
     ```
 
 ??? info "配置文件说明"
-    ```
+    ```vim
     # 以下设置默认情况下不需要修改
 
     # 需要安装的版本
@@ -54,19 +54,19 @@
 ## 安装
 
 !!! tip "Install"
-    ```
+    ```sh
     ./jmsctl.sh install
     ```
 
 ## 帮助
 
 !!! tip "Help"
-    ```
+    ```sh
     ./jmsctl.sh -h
     ```
 
 ??? question "如果网络有问题无法连接到 github"
-    ```
+    ```sh
     wget -O /opt/setuptools.tar.gz http://demo.jumpserver.org/download/setuptools.tar.gz  
     cd /opt  
     tar -xf setuptools.tar.gz  
@@ -74,3 +74,6 @@
     git pull  
     ./jmsctl.sh -h  
     ```
+
+后续的使用请参考 [快速入门](../admin-guide/quick_start.md)  
+如遇到问题可参考 [FAQ](../faq/faq.md)

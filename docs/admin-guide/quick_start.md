@@ -50,7 +50,7 @@
     ```
     mysql -uroot
     ```
-    ```
+    ```mysql
     grant all on *.* to 'root'@'%' identified by 'Test@2020.M';  
     flush privileges;
     ```

@@ -8,7 +8,7 @@
 - 环境迁移和更新升级请检查 SECRET_KEY 是否与之前设置一致, 不能随机生成, 否则数据库所有加密的字段均无法解密
 
 ??? tip "Linux 生成随机加密秘钥, 可以用下面的命令"
-    ```
+    ```sh
     if [ ! "$SECRET_KEY" ]; then
       SECRET_KEY=`cat /dev/urandom | tr -dc A-Za-z0-9 | head -c 50`;
       echo "SECRET_KEY=$SECRET_KEY" >> ~/.bashrc;
@@ -26,7 +26,7 @@
     ```
 
 ??? tip "macOS 生成随机 key 可以用下面的命令"
-    ```
+    ```sh
     if [ ! "$SECRET_KEY" ]; then
       SECRET_KEY=`LC_CTYPE=C tr -dc A-Za-z0-9 < /dev/urandom | head -c 50`;
       echo "SECRET_KEY=$SECRET_KEY" >> ~/.bash_profile;
@@ -42,14 +42,14 @@
       echo $BOOTSTRAP_TOKEN;
     fi
     ```
----
 
-    docker run --name jms_all -d
-      -p 80:80 -p 2222:2222
-      -e SECRET_KEY=$SECRET_KEY
-      -e BOOTSTRAP_TOKEN=$BOOTSTRAP_TOKEN
-      jumpserver/jms_all:latest
-
+```sh
+docker run --name jms_all -d
+  -p 80:80 -p 2222:2222
+  -e SECRET_KEY=$SECRET_KEY
+  -e BOOTSTRAP_TOKEN=$BOOTSTRAP_TOKEN
+  jumpserver/jms_all:latest
+```
 
 ### 访问
 
@@ -65,7 +65,7 @@
 - 数据库编码要求 uft8
 
 !!! tip "创建数据库"
-    ```
+    ```mysql
     create database jumpserver default charset 'utf8' collate 'utf8_bin';
     grant all on jumpserver.* to 'jumpserver'@'%' identified by 'weakPassword';
     ```
@@ -84,33 +84,38 @@
     REDIS_PASSWORD = weakPassword  
     VOLUME /opt/jumpserver/data/media  
     VOLUME /var/lib/mysql
----
 
-    docker run --name jms_all -d \  
-        -v /opt/jumpserver:/opt/jumpserver/data/media \  
-        -p 80:80 \  
-        -p 2222:2222 \  
-        -e SECRET_KEY=xxxxxx \  
-        -e BOOTSTRAP_TOKEN=xxx \  
-        -e DB_HOST=192.168.x.x \  
-        -e DB_PORT=3306 \  
-        -e DB_USER=root \  
-        -e DB_PASSWORD=xxx \  
-        -e DB_NAME=jumpserver \  
-        -e REDIS_HOST=192.168.x.x \  
-        -e REDIS_PORT=6379 \  
-        -e REDIS_PASSWORD=xxx \  
-        jumpserver/jms_all:latest
 
+```sh
+docker run --name jms_all -d \  
+  -v /opt/jumpserver:/opt/jumpserver/data/media \  
+  -p 80:80 \  
+  -p 2222:2222 \  
+  -e SECRET_KEY=xxxxxx \  
+  -e BOOTSTRAP_TOKEN=xxx \  
+  -e DB_HOST=192.168.x.x \  
+  -e DB_PORT=3306 \  
+  -e DB_USER=root \  
+  -e DB_PASSWORD=xxx \  
+  -e DB_NAME=jumpserver \  
+  -e REDIS_HOST=192.168.x.x \  
+  -e REDIS_PORT=6379 \  
+  -e REDIS_PASSWORD=xxx \  
+  jumpserver/jms_all:latest
+```
 
 ## Docker-Compose 部署
 
 !!! info "`.env` 的变量 用在 docker-compose 里面使用, 尽量自己调试一遍后再使用"
----
 
-    git clone https://github.com/jumpserver/Dockerfile.git
-    cd Dockerfile
-    cat .env
-    docker-compose up
+```sh
+git clone https://github.com/jumpserver/Dockerfile.git
+cd Dockerfile
+cat .env
+docker-compose up
+```
 
 !!! tip "[仓库地址](https://github.com/jumpserver/Dockerfile)"
+
+后续的使用请参考 [快速入门](../admin-guide/quick_start.md)  
+如遇到问题可参考 [FAQ](../faq/faq.md)

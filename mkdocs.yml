@@ -1,7 +1,7 @@
 site_name: 'JumpServer Docs'
 site_url: 'https://jumpserver.org'
 site_description: 'JumpServer Docs'
-site_author: '吴育煌'
+site_author: 'wojiushixiaobai'
 
 repo_name: 'JumpServer Docs'
 repo_url: 'https://github.com/jumpserver/docs'
@@ -22,7 +22,15 @@ nav:
         - 安装文档: install/step_by_step.md
         - 极速部署: install/setup_by_fast.md
         - 容器部署: install/docker_install.md
-        - 分布式部署: install/setup_by_prod.md
+        - 分布式部署: 
+            - 环境说明: install/setup_by_prod.md
+            - NFS部署: install/prod/distributed_01.md
+            - Tengine部署: install/prod/distributed_02.md
+            - Mariadb部署: install/prod/distributed_03.md
+            - Redis部署: install/prod/distributed_04.md
+            - Core部署: install/prod/distributed_05.md
+            - Koko部署: install/prod/distributed_06.md
+            - Guacamole部署: install/prod/distributed_07.md
         - Ansible部署: install/ansible_install.md
 
     - 管理文档:
@@ -50,10 +58,10 @@ nav:
 markdown_extensions:
     - admonition
     - codehilite:
-        guess_lang: false
-        linenums: false
+        guess_lang: True
+        linenums: False
     - toc:
-        permalink: true
+        permalink: True
     - footnotes
     - attr_list
     - def_list

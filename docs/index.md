@@ -12,7 +12,7 @@ JumpServer 现已支持管理 SSH、 Telnet、 RDP、 VNC 协议资产。
 
 改变世界, 从一点点开始。
 
-!!! tip
+!!! tip ""
     [KubeOperator][ko_url] 是 JumpServer 团队在 Kubernetes 领域的的又一全新力作，欢迎关注和使用。
 
 [ko_url]: https://github.com/KubeOperator/KubeOperator
