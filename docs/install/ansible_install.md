@@ -171,6 +171,8 @@ enable_selinux = True                # 如果你的资产关闭了 selinux , 请
 enable_firewalld = True              # 如果你的资产关闭了 firewalld , 请修改此项为 False
 ```
 
+!!! warning "请仔细看说明"
+
 ### 7. 配置互信
 
 ```sh
@@ -191,5 +193,5 @@ ansible all -m shell -a 'whoami'
 ansible-playbook deploy.yml
 ```
 
-如果安装过程提示错误, 可以尝试重新执行 ansible-playbook deploy.yml  
-暂时未集成升级功能, 暂时未集成卸载功能(等待后续更新)
+- 如果安装过程提示错误, 可以尝试重新执行 ansible-playbook deploy.yml  
+- 暂时未集成升级功能, 暂时未集成卸载功能(等待后续更新)

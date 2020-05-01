@@ -24,14 +24,14 @@ nav:
         - 容器部署: install/docker_install.md
         - 分布式部署: 
             - 环境说明: install/setup_by_prod.md
-            - NFS部署: install/prod/distributed_01.md
-            - Tengine部署: install/prod/distributed_02.md
-            - Mariadb部署: install/prod/distributed_03.md
-            - Redis部署: install/prod/distributed_04.md
-            - Core部署: install/prod/distributed_05.md
-            - Koko部署: install/prod/distributed_06.md
-            - Guacamole部署: install/prod/distributed_07.md
-        - Ansible部署: install/ansible_install.md
+            - NFS 部署: install/prod/distributed_01.md
+            - Tengine 部署: install/prod/distributed_02.md
+            - Mariadb 部署: install/prod/distributed_03.md
+            - Redis 部署: install/prod/distributed_04.md
+            - Core 部署: install/prod/distributed_05.md
+            - Koko 部署: install/prod/distributed_06.md
+            - Guacamole 部署: install/prod/distributed_07.md
+        - Ansible 部署: install/ansible_install.md
 
     - 管理文档:
         - 快速入门: admin-guide/quick_start.md
