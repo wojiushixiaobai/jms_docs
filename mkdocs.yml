@@ -35,20 +35,28 @@ nav:
 
     - 管理文档:
         - 快速入门: admin-guide/quick_start.md
+        - 更新升级: admin-guide/upgrade.md
+        - 迁移文档: admin-guide/migration.md
+
     - 开发文档:
         - API文档: dev/rest_api.md
+
     - 问题清单: issues/list.md
+
     - 用户文档:
         - 用户页面: user-guide/user_guide.md
         - 我的资产: user-guide/assets/user-asset.md
         - 我的应用:
               - 数据库应用: user-guide/applications/user-database-app.md
+
         - 命令执行: user-guide/ops/command-executions/create.md
         - 个人信息: user-guide/users/profile.md
         - Web终端: user-guide/terminal/web-terminal.md
         - 文件管理: user-guide/terminal/web-sftp.md
+
     - 帮助文档:
         - FAQ文档: faq/faq.md
+
     - 关于:
         - 许可: about/license.md
         - 贡献: about/contributor.md
@@ -95,7 +103,7 @@ markdown_extensions:
 extra_css:
     - css/extra.css
 
-copyright: Copyright &copy; 2014-2020 <a href="https://jumpserver.org/">杭州飞致云信息科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15023818号</a>
+copyright: Copyright &copy; 2014-2020 <a href="https://www.fit2cloud.com">杭州飞致云信息科技有限公司</a>, All Rights Reserved. <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备15023818号</a>
 
 plugins:
     - search
