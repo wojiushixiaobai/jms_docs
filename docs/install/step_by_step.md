@@ -93,7 +93,7 @@ pip install -r requirements.txt
 ```
 ??? info "注意不能使用纯数字字符串"
     以下模板仅供参考  
-    ```vim
+    ```yaml
     # SECURITY WARNING: keep the secret key used in production secret!
     # 加密秘钥 生产环境中请修改为随机字符串，请勿外泄, 可使用命令生成
     # cat /dev/urandom | tr -dc A-Za-z0-9 | head -c 49;echo
@@ -258,7 +258,7 @@ vi config.yml
 
 ??? info "BOOTSTRAP_TOKEN 需要从 jumpserver/config.yml 里面获取, 保证一致"
     以下配置仅供参考
-    ```vim
+    ```yaml
     # 项目名称, 会用来向Jumpserver注册, 识别而已, 不能重复
     # NAME: {{ Hostname }}
 
