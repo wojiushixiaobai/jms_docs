@@ -354,13 +354,13 @@ vi config.yml
 
 !!! tip "例:"
     ```sh
-    docker run --name jms_koko -d 
-      -p 2222:2222 
-      -p 127.0.0.1:5000:5000 
-      -e CORE_HOST=http://192.168.244.144:8080 
-      -e BOOTSTRAP_TOKEN=zxffNymGjP79j6BN 
-      -e LOG_LEVEL=ERROR 
-      --restart=always 
+    docker run --name jms_koko -d
+      -p 2222:2222
+      -p 127.0.0.1:5000:5000
+      -e CORE_HOST=http://192.168.244.144:8080
+      -e BOOTSTRAP_TOKEN=zxffNymGjP79j6BN
+      -e LOG_LEVEL=ERROR
+      --restart=always
       jumpserver/jms_koko:1.5.8
     ```
 
@@ -493,11 +493,11 @@ sh /config/tomcat9/bin/startup.sh
 
 !!! tip "例:"
     ```sh
-    docker run --name jms_guacamole -d 
-      -p 127.0.0.1:8081:8080 
-      -e JUMPSERVER_SERVER=http://192.168.244.144:8080 
-      -e BOOTSTRAP_TOKEN=abcdefg1234 
-      -e GUACAMOLE_LOG_LEVEL=ERROR 
+    docker run --name jms_guacamole -d
+      -p 127.0.0.1:8081:8080
+      -e JUMPSERVER_SERVER=http://192.168.244.144:8080
+      -e BOOTSTRAP_TOKEN=abcdefg1234
+      -e GUACAMOLE_LOG_LEVEL=ERROR
       jumpserver/jms_guacamole:1.5.8
     ```
 
@@ -604,5 +604,4 @@ nginx -s reload
     服务全部启动后, 访问 jumpserver 服务器 nginx 代理的 80 端口, 不要通过8080端口访问  
     默认账号: admin 密码: admin  
 
-后续的使用请参考 [快速入门](../admin-guide/quick_start.md)  
-如遇到问题可参考 [FAQ](../faq/faq.md)
+后续的使用请参考 [快速入门](../admin-guide/quick_start/)

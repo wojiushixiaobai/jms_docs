@@ -30,16 +30,11 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --add-port=443/tcp --permanent
 firewall-cmd --zone=public --add-port=2222/tcp --permanent
 firewall-cmd --reload
-setenforce 0
-sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
+semanage fcontext -a -t httpd_sys_content_t '/opt/jumpserver(/.*)?'
+setsebool -P httpd_can_network_connect 1
 ```
 
-??? warning "只开放需要访问的端口，生产环境下不应该关闭 selinux"
-    你可以参考下面的命令
-    ```sh
-    semanage fcontext -a -t httpd_sys_content_t '/opt/jumpserver(/.*)?'
-    setsebool -P httpd_can_network_connect 1
-    ```
+!!! warning "生产环境下不应该关闭 selinux"
 
 ### 3. 安装 tengine
 
@@ -81,6 +76,7 @@ yum -y install nfs-utils
 ```sh
 showmount -e 192.168.100.99
 mkdir -p /opt/jumpserver/data
+restorecon -R /opt/jumpserver/data/
 mount -t nfs 192.168.100.99:/data /opt/jumpserver/data
 echo "192.168.100.99:/data /opt/jumpserver/data nfs defaults 0 0" >> /etc/fstab
 ```
@@ -272,6 +268,3 @@ systemctl start nginx
     ```
     密码: admin   
     如果能登陆代表部署成功
-
-- 后续的使用请参考 [快速入门](../admin-guide/quick_start.md)
-- 如遇到问题可参考 [FAQ](../../faq/faq.md)

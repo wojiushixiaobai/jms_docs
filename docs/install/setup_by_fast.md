@@ -65,6 +65,15 @@
     ./jmsctl.sh -h
     ```
 
+## 升级
+
+!!! tip "Upgrade"
+    ```sh
+    cd /opt/setuptools
+    git pull
+    ./jmsctl.sh upgrade
+    ```
+
 ??? question "如果网络有问题无法连接到 github"
     ```sh
     wget -O /opt/setuptools.tar.gz http://demo.jumpserver.org/download/setuptools.tar.gz  
@@ -75,5 +84,4 @@
     ./jmsctl.sh -h  
     ```
 
-后续的使用请参考 [快速入门](../admin-guide/quick_start.md)  
-如遇到问题可参考 [FAQ](../faq/faq.md)
+后续的使用请参考 [快速入门](../admin-guide/quick_start/)  

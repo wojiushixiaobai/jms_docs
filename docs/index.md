@@ -1,6 +1,6 @@
 # 总体介绍
 
-欢迎来到 JumpServer 文档。
+欢迎使用 JumpServer 文档。
 
 JumpServer 是全球首款完全开源的堡垒机, 使用 GNU GPL v2.0 开源协议, 是符合 4A 的专业运维审计系统。
 

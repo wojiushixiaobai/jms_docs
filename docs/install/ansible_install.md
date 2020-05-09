@@ -1,6 +1,6 @@
 # Ansible 集群部署
 
-## Ansible-playbook
+## Ansible-Playbook
 
 !!! warning "本项目请先自行调优后再使用, 请勿直接在生产环境进行使用"
 

@@ -117,5 +117,4 @@ docker-compose up
 
 !!! tip "[仓库地址](https://github.com/jumpserver/Dockerfile)"
 
-后续的使用请参考 [快速入门](../admin-guide/quick_start.md)  
-如遇到问题可参考 [FAQ](../faq/faq.md)
+后续的使用请参考 [快速入门](../admin-guide/quick_start/)
