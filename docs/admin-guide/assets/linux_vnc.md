@@ -1,8 +1,8 @@
 # Linux VNC 资产要求
 
-- 资产必须部署 vncserver
-- 防火墙 vncserver 端口必须开放给 jumpserver 所有服务器访问
-- 资产无其他登录限制
+!!! info "资产必须部署 vncserver"
+
+!!! info "防火墙 vncserver 端口必须开放给 jumpserver 所有服务器访问"
 
 !!! tip "Centos 7 示例"
     ```sh

@@ -69,7 +69,6 @@ nav:
     - 问题清单: issues/list.md
 
     - 用户文档:
-        - 用户页面: user-guide/user_guide.md
         - 我的资产: user-guide/assets/user-asset.md
         - 我的应用:
               - 数据库应用: user-guide/applications/user-database-app.md
