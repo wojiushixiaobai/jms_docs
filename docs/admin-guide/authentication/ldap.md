@@ -11,7 +11,7 @@
     `绑定DN`        `cn=administrator,cn=Users,dc=jumpserver,dc=org`  
     `用户OU`        `ou=jumpserver,dc=jumpserver,dc=org`  
     `用户过滤器`     `(cn=%(user)s)`  
-    `LADP属性映射`  `{"username": "cn", "name": "sn", "email": "mail"}`
+    `LADP属性映射`  `{"username": "cn", "name": "sn", "email": "mail"}`  
     `启动LDAP认证`  `☑️`
 
     !!! tip "选项说明"
@@ -28,3 +28,27 @@
         `{"username": "uid", "name": "sn", "email": "mail"}` 或 `{"username": "sAMAccountName", "name": "cn", "email": "mail"}`
 
         注意: 用户过滤器用什么筛选, LDAP属性映射字段要与其一致, 过滤器用 uid, LDAP属性映射也要用 uid
+
+
+!!! info "LDAP 的部分功能在 jumpserver/config.yml 进行设置"
+    根据需要开启, 请勿照抄
+    ```yaml
+    # LDAP/AD settings
+    # LDAP 搜索分页数量
+    AUTH_LDAP_SEARCH_PAGED_SIZE: 1000
+    #
+    # 定时同步用户
+    # 启用 / 禁用
+    AUTH_LDAP_SYNC_IS_PERIODIC: True
+    # 同步间隔 (单位: 时) (优先）
+    AUTH_LDAP_SYNC_INTERVAL: 12
+    # Crontab 表达式
+    AUTH_LDAP_SYNC_CRONTAB: * 6 * * *
+    #
+    # LDAP 用户登录时仅允许在用户列表中的用户执行 LDAP Server 认证
+    AUTH_LDAP_USER_LOGIN_ONLY_IN_USERS: False
+    #
+    # LDAP 认证时如果日志中出现以下信息将参数设置为 0 (详情参见：https://www.python-ldap.org/en/latest/faq.html)
+    # In order to perform this operation a successful bind must be completed on the connection
+    AUTH_LDAP_OPTIONS_OPT_REFERRALS: -1
+    ```
